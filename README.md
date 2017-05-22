@@ -130,21 +130,21 @@ ValueAnimator animator = ValueAnimator.ofFloat(0, mScreenHeight - pao.getHeight(
 
 //xml定义动画--------------------------------------------------------------------------------------------------------------------------
 
-<set xmlns:android="http://schemas.android.com/apk/res/android"  
+  <set xmlns:android="http://schemas.android.com/apk/res/android"  
     android:ordering="together" >  
-    <objectAnimator  
-        android:duration="1000"  
-        android:propertyName="scaleX"  
-        android:valueFrom="1"  
-        android:valueTo="0.5" >  
-    </objectAnimator>  
-    <objectAnimator  
-        android:duration="1000"  
-        android:propertyName="scaleY"  
-        android:valueFrom="1"  
-        android:valueTo="0.5" >  
-    </objectAnimator>    
-</set>  
+	    <objectAnimator  
+		android:duration="1000"  
+		android:propertyName="scaleX"  
+		android:valueFrom="1"  
+		android:valueTo="0.5" >  
+	    </objectAnimator>  
+	    <objectAnimator  
+		android:duration="1000"  
+		android:propertyName="scaleY"  
+		android:valueFrom="1"  
+		android:valueTo="0.5" >  
+	    </objectAnimator>    
+  </set>  
 
 // 加载动画  
         Animator anim = AnimatorInflater.loadAnimator(this, R.animator.scale);  
