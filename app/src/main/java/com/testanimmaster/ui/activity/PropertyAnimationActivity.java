@@ -10,6 +10,10 @@ import android.view.View;
 import com.testanimmaster.R;
 import com.testanimmaster.common.RecycleViewCallback;
 import com.testanimmaster.common.StringItemAdapter;
+import com.testanimmaster.ui.activity.valueanim.AnimSetActivity;
+import com.testanimmaster.ui.activity.valueanim.ObjectAnimActivity;
+import com.testanimmaster.ui.activity.valueanim.ValueAnimActivity;
+import com.testanimmaster.ui.activity.valueanim.XMLValueAnimActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,10 +48,20 @@ public class PropertyAnimationActivity extends AppCompatActivity implements Recy
         Intent intent = new Intent();
         switch (position) {
             case 0:
-                intent.setClass(this, PropertyAnimationSubActivity.class);
+                intent.setClass(this, ObjectAnimActivity.class);
                 startActivity(intent);
                 break;
             case 1:
+                intent.setClass(this, ValueAnimActivity.class);
+                startActivity(intent);
+                break;
+            case 2:
+                intent.setClass(this, AnimSetActivity.class);
+                startActivity(intent);
+                break;
+            case 3:
+                intent.setClass(this, XMLValueAnimActivity.class);
+                startActivity(intent);
                 break;
         }
     }

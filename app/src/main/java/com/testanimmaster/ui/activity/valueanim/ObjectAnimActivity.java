@@ -1,4 +1,4 @@
-package com.testanimmaster.ui.activity;
+package com.testanimmaster.ui.activity.valueanim;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -10,11 +10,12 @@ import android.view.View;
 import com.testanimmaster.R;
 import com.testanimmaster.common.RecycleViewCallback;
 import com.testanimmaster.common.StringItemAdapter;
+import com.testanimmaster.ui.activity.TransitActivity;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class PropertyAnimationSubActivity extends AppCompatActivity implements RecycleViewCallback {
+public class ObjectAnimActivity extends AppCompatActivity implements RecycleViewCallback {
     RecyclerView rvMain;
     StringItemAdapter adapter;
 
@@ -31,6 +32,8 @@ public class PropertyAnimationSubActivity extends AppCompatActivity implements R
         dates.add("ObjectAnimator基本使用");
         dates.add("不用animset多种动画一起作用");
         dates.add("抛物线");
+        dates.add("使用PropertyValuesHolder控制多重属性");
+
         adapter = new StringItemAdapter(this, dates);
         adapter.setItemClickCallback(this);
         rvMain.setLayoutManager(new LinearLayoutManager(this));
@@ -50,6 +53,9 @@ public class PropertyAnimationSubActivity extends AppCompatActivity implements R
                 break;
             case 2:
                 intent.putExtra("animFlg", "Parabola");
+                break;
+            case 3:
+                intent.putExtra("animFlg", "PropertyValuesHolder");
                 break;
         }
         startActivity(intent);

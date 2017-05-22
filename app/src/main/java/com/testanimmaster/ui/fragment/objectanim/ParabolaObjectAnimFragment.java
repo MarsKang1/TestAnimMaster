@@ -13,10 +13,10 @@ import android.widget.ImageView;
 
 import com.testanimmaster.R;
 
-public class ParabolaFragment extends Fragment {
+public class ParabolaObjectAnimFragment extends Fragment {
 
-    public static ParabolaFragment newInstance() {
-        return new ParabolaFragment();
+    public static ParabolaObjectAnimFragment newInstance() {
+        return new ParabolaObjectAnimFragment();
     }
 
     @Override

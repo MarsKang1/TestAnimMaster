@@ -17,8 +17,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.activity.PropertyAnimationActivity" />
-        <activity android:name=".ui.activity.PropertyAnimationSubActivity" />
-        <activity android:name=".ui.activity.TransitActivity"></activity>
+        <activity android:name=".ui.activity.valueanim.ObjectAnimActivity" />
+        <activity android:name=".ui.activity.TransitActivity" />
+        <activity android:name=".ui.activity.valueanim.ValueAnimActivity" />
+        <activity android:name=".ui.activity.valueanim.AnimSetActivity" />
+        <activity android:name=".ui.activity.valueanim.XMLValueAnimActivity"></activity>
     </application>
 
 </manifest>
