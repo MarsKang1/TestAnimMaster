@@ -1,5 +1,7 @@
 # TestAnimMaster
+
 //简述----------------------------------------------------------------------------------------------------------------------------------
+
 View Animation
 特点简单
     支持简单的缩放、平移、旋转、透明度基本的动画
@@ -21,8 +23,10 @@ Property Animation
 	4.AnimatorInflater 用户加载属性动画的xml文件
 	5.TypeEvaluator  类型估值，主要用于设置动画操作属性的值。
 	6.TimeInterpolator 时间插值，上面已经介绍。   
+
 //ObjectAnimator的使用------------------------------------------------------------------------------------------------------------------
-     ObjectAnimator.ofFloat(view, "rotationX", 0.0F, 360.0F).setDuration(500).start();  //x轴滑动    rotationX是getPropName反射获取
+     
+  ObjectAnimator.ofFloat(view, "rotationX", 0.0F, 360.0F).setDuration(500).start();  //x轴滑动    rotationX是getPropName反射获取
      //不使用animset完成控制动画的多重属性变化
      ObjectAnimator anim = ObjectAnimator.ofFloat(view, "zhy", 1.0F,  0.0F).setDuration(500);//设置属性的那个字符串，随便写一个该对象没有的属性(AnimatorUpdateListener必须实现用来控制对象的属性变化)
     anim.start();  
@@ -46,9 +50,11 @@ Property Animation
      PropertyValuesHolder pvhY = PropertyValuesHolder.ofFloat("scaleX", 1f, 0, 1f);  
      PropertyValuesHolder pvhZ = PropertyValuesHolder.ofFloat("scaleY", 1f, 0, 1f);  
      ObjectAnimator.ofPropertyValuesHolder(view, pvhX, pvhY,pvhZ).setDuration(1000).start();  
-
+     
 
 //ValueAnimator的使用------------------------------------------------------------------------------------------------------------------ 
+
+
 ValueAnimator跟ObjectAnimator比
  1.ObjectAnimator是继承于ValueAnimator
  2.ValueAnimator 这个类是对值得平滑过渡的动画，什么意思呢。就是对数值在一定时间内进行平滑过渡。ObjectAnimator 与ValueAnimator不同的是，ObjectAnimator是对 对象的属性 进行平滑过渡。
@@ -89,8 +95,11 @@ ValueAnimator animator = ValueAnimator.ofFloat(0, mScreenHeight - pao.getHeight(
 通过上述代码我们在设置TypeEvaluator（估值器）来控制返回的animation.getAnimatedValue()从而控制动画的属性
 
 通过跟上面的对比我们发现我们可以通过设置TypeEvaluator控制返回内容控制动画的属性同时我们也可以通过直接从animation.getAnimatedValue()获取到的0到1的返回值控制动画的属性两者的选择看自己的喜好
+
+
 //AnimatorSet--------------------------------------------------------------------------------------------------------------------------
- //方案1
+
+//方案1
  ObjectAnimator anim1 = ObjectAnimator.ofFloat(mBlueBall, "scaleX", 1.0f, 2f);  
         ObjectAnimator anim2 = ObjectAnimator.ofFloat(mBlueBall, "scaleY", 1.0f, 2f);  
         AnimatorSet animSet = new AnimatorSet();  
@@ -118,7 +127,9 @@ ValueAnimator animator = ValueAnimator.ofFloat(0, mScreenHeight - pao.getHeight(
         
 第一：使用playTogether两个动画同时执行，当然还有playSequentially依次执行~~
 第二：如果我们有一堆动画，如何使用代码控制顺序，比如1，2同时；3在2后面；4在1之前等~就是效果2了
+
 //xml定义动画--------------------------------------------------------------------------------------------------------------------------
+
 <set xmlns:android="http://schemas.android.com/apk/res/android"  
     android:ordering="together" >  
     <objectAnimator  
