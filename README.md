@@ -160,7 +160,10 @@ ValueAnimator animator = ValueAnimator.ofFloat(0, mScreenHeight - pao.getHeight(
 
 
 
-
+后续需要补充的内容
+1.svg动画
+2.单选复选框选中效果
+3.贝塞尔曲线
 
 
 
